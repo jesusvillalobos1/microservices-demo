@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/microservices-demo/microservices-demo.svg?branch=master)](https://travis-ci.org/microservices-demo/microservices-demo)
+<!-- [![Build Status](https://travis-ci.org/microservices-demo/microservices-demo.svg?branch=master)](https://travis-ci.org/microservices-demo/microservices-demo)
 
 # Sock Shop : A Microservice Demo Application
 
@@ -28,4 +28,18 @@ Use [Weave Scope](http://weave.works/products/weave-scope/) or [Weave Cloud](htt
 
 ![Sock Shop in Weave Scope](https://github.com/microservices-demo/microservices-demo.github.io/raw/master/assets/sockshop-scope.png)
 
-## 
+##  -->
+
+
+<h3 id="clone-the-microservices-demo-repo">Clone the microservices-demo repo</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/microservices-demo/microservices-demo
+cd microservices-demo
+</code></pre></div></div>
+
+<h3 id="start-minikube">Start Minikube</h3>
+
+<p>You can start Minikube by running:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>minikube start --memory 8192 --cpus 4
+</code></pre></div></div>
