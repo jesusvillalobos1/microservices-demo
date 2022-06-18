@@ -41,5 +41,17 @@ cd microservices-demo
 
 <p>You can start Minikube by running:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>minikube start --memory 8192 --cpus 4
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>minikube start --memory 4200 --cpus 4
+</code></pre></div></div>
+
+<h3 id="deploy-sock-shop">Deploy Sock Shop</h3>
+
+<p>Deploy the Sock Shop application on Minikube</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl create -f deploy/kubernetes/manifests
+</code></pre></div></div>
+
+<p>Wait for all the Sock Shop services to start:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl get pods --namespace="sock-shop"
 </code></pre></div></div>
