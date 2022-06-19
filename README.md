@@ -117,6 +117,11 @@ minikube ssh
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl get pods --namespace="sock-shop"
 </code></pre></div></div>
 
+<p>Incredibly useful command to find the URL of the services that are running:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>minikube service list
+</code></pre></div></div>
+
 <h3 id="check-the-sock-shop-webpage">Check the Sock Shop webpage</h3>
 
 <p>Once the application is deployed, navigate to http://minikubeIP:30001 to see the Sock Shop home page.</p>
@@ -142,5 +147,32 @@ docker run --rm weaveworksdemos/load-test -d 5 -h minikubeIP:30001 -c 2 -r 100
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>minikube delete
 </code></pre></div></div>
 
+
+<br>
+<br>
+
+<div class="col-sm-9">
+            <h2 id="kubernetes">Monitoring</h2>
+<p>To deploy Prometheus &amp; Grafana and to setup all the nice graphs that we got ready
+for you, simply:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl create -f ./deploy/kubernetes/manifests-monitoring
+</code></pre></div></div>
+
+<p>Assuming that used <code class="highlighter-rouge">minikube</code> to deploy your Kubernetes cluster, to get the URL of
+the services:</p>
+
+<h4 id="prometheus">Prometheus</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ minikube service list | grep prometheus
+| monitoring  | prometheus           | http://192.168.99.100:31090 |
+</code></pre></div></div>
+
+<h4 id="grafana">Grafana</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ minikube service list | grep grafana
+| monitoring  | grafana              | http://192.168.99.100:31300 |
+</code></pre></div></div>
+
   </body>
 </html>
+
+
