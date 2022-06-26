@@ -1,4 +1,3 @@
-cd ~/microservices-demo
 minikube start --memory 4200 --cpus 4
 kubectl create -f deploy/kubernetes/manifests
 export MinikubeIP=minikube ip

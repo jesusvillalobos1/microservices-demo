@@ -52,7 +52,12 @@ Use [Weave Scope](http://weave.works/products/weave-scope/) or [Weave Cloud](htt
 
 
 
-<p>This demo demonstrates running the Sock Shop on Minikube.</p>
+<p>This demo demonstrates running the Sock Shop app on Minikube.
+<br>Originally forked from microservices-demo/microservices-demo.
+<br>Modifications were made to create cluster in Minikube, deploy Sock-Shop app and monitoring tools (Prometheus and Grafana)
+</p>
+
+<p>Optionally you can run the script "shock_shop_with_prom.sh" to create the cluster with everything deployed and skip the instructions below.</p>
 
 <h3 id="pre-requisites">Pre-requisites</h3>
 <ul>
